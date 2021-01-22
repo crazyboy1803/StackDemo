@@ -10,11 +10,33 @@ public class StackExample
     }
     void push()//insert
     {
-        System.out.println("push function is working");
+        if(top==4)
+        {
+            System.out.println("Stack is full");
+        }
+        else
+        {
+            System.out.println("Enter data");
+            Scanner sc2 = new Scanner(System.in);
+            int data = sc2.nextInt();
+            top = top +1 ;
+            ar[top] = data;
+            System.out.println("Data inserted....");
+        }
+//        System.out.println("push function is working");
     }
     void pop()//delete
     {
-        System.out.println("pop function is working");
+        if(top == -1)
+        {
+            System.out.println("Stack is already empty");
+        }
+        else
+        {
+            System.out.println("Element deleted ="+ar[top]);
+            top = top-1;
+        }
+//        System.out.println("pop function is working");
     }
     void traverse()//view
     {
